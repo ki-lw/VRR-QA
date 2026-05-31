@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+*.key
+
+# Data not shipped in the repo
+data/videos/
+data/frame_cache/
+outputs/
+
+# Media
+*.mp4
+*.mkv
+*.webm
+*.mov
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

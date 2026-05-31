@@ -1,0 +1,9 @@
+# Public SDKs for the two model providers used by the pipeline.
+google-genai>=1.0.0      # Gemini (native video, FPS-controllable)
+openai>=1.40.0           # GPT judge (frame/image input)
+
+# Video decoding / frame extraction for the GPT judge.
+opencv-python>=4.8.0
+
+# Misc
+tqdm>=4.66.0
