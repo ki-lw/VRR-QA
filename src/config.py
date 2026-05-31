@@ -27,7 +27,7 @@ GPT_JUDGE_MODEL     = os.environ.get("GPT_JUDGE_MODEL",     "gpt-5.5-pro")
 GEMINI_ARBITER_MODEL = os.environ.get("GEMINI_ARBITER_MODEL", "gemini-3.5-flash")
 # Optional LLM fallback for the question classifier (Stage 0).
 # Originally Qwen3-4B; any chat model works. Empty -> rule-based only.
-CLASSIFIER_MODEL = os.environ.get("CLASSIFIER_MODEL", "gemini-3.1-pro")
+CLASSIFIER_MODEL = os.environ.get("CLASSIFIER_MODEL", "Qwen3-4B")
 
 # ---------------------------------------------------------------------------
 # Adaptive FPS strategy

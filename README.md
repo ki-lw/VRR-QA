@@ -16,28 +16,28 @@ verification stages.
 
 ```
                  ┌─────────────────────────────────────────────┐
- test question → │ Stage 0: classify into 1 of 9 VRR categories │
+ test question → │ Stage 0: classify into 1 of 9 VRR categories│
                  └─────────────────────────────────────────────┘
                                     │
         ┌───────────────────────────────────────────────────────────┐
-        │ Stage 1 — three answer branches (Gemini, 1 FPS)            │
-        │   • direct          • category-guided     • conservative   │
+        │ Stage 1 — three answer branches (Gemini, 1 FPS)           │
+        │   • direct          • category-guided     • conservative  │
         └───────────────────────────────────────────────────────────┘
                                     │
                 all 3 agree ───────────────────→ accept (consensus)
                                     │ disagree (hard)
         ┌───────────────────────────────────────────────────────────┐
-        │ Stage 2 — cross-model recheck (adaptive FPS)               │
-        │   • Gemini judge (native video)                            │
-        │   • GPT judge     (frames)      ← different model family   │
-        │   both audit the 3 branch rationales vs. the video         │
+        │ Stage 2 — cross-model recheck (adaptive FPS)              │
+        │   • Gemini judge (native video)                           │
+        │   • GPT judge     (frames)      ← different model family  │
+        │   both audit the 3 branch rationales vs. the video        │
         └───────────────────────────────────────────────────────────┘
                                     │
                 both agree ────────────────────→ accept
                                     │ disagree
         ┌───────────────────────────────────────────────────────────┐
-        │ Stage 3 — final arbitration (Gemini 3.5 Flash, adaptive)   │
-        │   watch the video, choose between the 2 judge answers      │
+        │ Stage 3 — final arbitration (Gemini 3.5 Flash, adaptive)  │
+        │   watch the video, choose between the 2 judge answers     │
         └───────────────────────────────────────────────────────────┘
 ```
 
@@ -110,7 +110,7 @@ variables:
 | Stage 2 Gemini judge | `GEMINI_JUDGE_MODEL` | `gemini-3.1-pro` |
 | Stage 2 GPT judge | `GPT_JUDGE_MODEL` | `gpt-5.5-pro` |
 | Stage 3 arbiter | `GEMINI_ARBITER_MODEL` | `gemini-3.5-flash` |
-| Classifier fallback | `CLASSIFIER_MODEL` | `gemini-3.1-pro` (originally Qwen3-4B) |
+| Classifier fallback | `CLASSIFIER_MODEL` | `Qwen3-4B`  |
 
 ### Videos
 
